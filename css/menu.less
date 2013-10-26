@@ -1,25 +1,31 @@
 
 /*
  *	Alter these to change the theme
+ *	default - red theme
  */
 
 /* Non-Responsive colors */
 @navbg: #fff;
-@basecolor: #C02942;
-@fontcolor: #45473D;
-@hover-fontcolor: #fff;
+@theme-background-color: #C02942; /* default theme color of menu red/green/etc */
+@font-color: #45473D;			  /* font color of non-responsive view */
+@hover-font-color: #fff; 		  /* hover font color of non-responsive view */
 
 /* Responsive colors */
-@res-hover: #D33450;
-@res-font-color: #fff;
+@theme-hover-color: #D33450; 			  /* responsive mode hover background */
+@res-font-color: #fff;			  /* responsive mode hover background */
 @res-list-border-top: #C75454;
+
+a:active, a:visited { 
+    border: none;
+    outline: none;
+}
 
 nav{
 	position: fixed;
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 56px;
+	height: 58px;
 	background-color: @navbg;
 }
 
@@ -43,41 +49,34 @@ nav ul li a{
 	margin: 0;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: @fontcolor;
+	color: @font-color;
 	padding: 20px 20px;
 	display: inline-block;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 13px;
 }
 
 nav ul li a:hover{
-	color: @hover-fontcolor;
+	color: @hover-font-color;
 	text-decoration: none;
-	background-color: @res-hover;
+	background-color: @theme-hover-color;
 }
 
-a:active, a:visited { 
-    border: none;
-    outline: none;
-    color: @fontcolor;
+nav ul li a:active, nav ul li a:visited {
 	text-decoration: none;
-}
-
-nav ul li a.logo {
-	vertical-align: baseline;
 }
 
 nav a#responsive-btn{
 	display: none;
-	background-color: @basecolor;
+	background-color: @theme-background-color;
 	background-image: url('../img/menu-dashes.png');
-	width: 56px;
-	height: 56px;
+	width: 58px;
+	height: 58px;
 	float: right;
 }
 
 nav a#responsive-btn:hover{
-	background-color: @res-hover;
+	background-color: @theme-hover-color;
 }
 
 @media (max-width: 768px) {
@@ -102,11 +101,11 @@ nav a#responsive-btn:hover{
 		width: 100%;
 		position: relative;
 		border-top: 1px solid @res-list-border-top;
-		background-color: @basecolor;
+		background-color: @theme-background-color;
 	}
 
 	nav ul li:hover {
-		background-color: @res-hover;
+		background-color: @theme-hover-color;
 	}
 
 	nav ul li a {

@@ -4,7 +4,7 @@
 	<title>Responsive Menu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=9" />
-	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript"></script>
 	<link rel="stylesheet/less" type="text/css" href="css/menu.less">
@@ -12,18 +12,27 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/less.js"></script>
 	
+	<!-- Non Important Styles -->
 	<style type="text/css">
 
 		body{
-			font-family: 'Quicksand', sans-serif;
-			background-color: #E5E5E5;
+			font-family: 'Raleway', sans-serif;
+			background-color: #E6E6E6;
 		}
 
 		h1.enlarged {
-			font-size: 120px;
+			font-weight: 300;
+			font-size: 100px;
+			text-transform: uppercase;
+		}
+
+		.wrapper {
+			margin-top: 200px;
+			text-align: center;
 		}
 
 	</style>
+	<!-- End -->
 </head>
 <body>
 
@@ -39,6 +48,17 @@
 			<a href="#" id="responsive-btn"></a>
 		</div>
 	</nav>
+
+	<div class="container wrapper">
+		<div>
+			<h1 class="enlarged">Responsive Menu</h1>
+			<h2>This is a responsive menu tested to work with IE9+, FF and Chrome</h2>
+			<hr>
+			<p>
+				<a class="btn btn-lg btn-danger" href="https://github.com/holiday/responsive-menu">View Repository</a>
+			</p>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="js/responsive-menu.js"></script>
 </body>
