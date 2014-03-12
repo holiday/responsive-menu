@@ -5,6 +5,7 @@
  */
 
 /* Non-Responsive colors */
+@nav-height: 60px;
 @navbg: #fff;
 @theme-background-color: #C02942; /* default theme color of menu red/green/etc */
 @font-color: #45473D;			  /* font color of non-responsive view */
@@ -25,7 +26,7 @@ nav{
 	top: 0;
 	right: 0;
 	width: 100%;
-	height: 58px;
+	height: @nav-height;
 	background-color: @navbg;
 }
 
@@ -50,7 +51,8 @@ nav ul li a{
 	text-transform: uppercase;
 	text-decoration: none;
 	color: @font-color;
-	padding: 20px 20px;
+	line-height: @nav-height;
+	padding: 0px 20px;
 	display: inline-block;
 	font-weight: 400;
 	font-size: 13px;
@@ -66,17 +68,48 @@ nav ul li a:active, nav ul li a:visited {
 	text-decoration: none;
 }
 
+/*
 nav a#responsive-btn{
 	display: none;
 	background-color: @theme-background-color;
 	background-image: url('../img/menu-dashes.png');
-	width: 58px;
-	height: 58px;
+	width: @nav-height;
+	height: @nav-height;
 	float: right;
 }
 
 nav a#responsive-btn:hover{
 	background-color: @theme-hover-color;
+}
+
+*/
+
+nav a#responsive-btn{
+	display: none;
+	background-color: @theme-background-color;
+	padding: 19px 15px;
+	width: @nav-height;
+	height: @nav-height;
+	color: #fff;
+	float: right;
+}
+
+nav a#responsive-btn div {
+	width: 25px;
+	float: left;
+	margin-right: 5px;
+}
+
+nav a#responsive-btn span.dash {
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	display: block;
+	margin-bottom: 6px;
+}
+
+a#responsive-btn:hover{
+	opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -110,7 +143,8 @@ nav a#responsive-btn:hover{
 
 	nav ul li a {
 		color: @res-font-color;
-		padding: 15px 20px;
+		line-height: @nav-height;
+		padding: 0px 20px;
 		width: 100%;
 	}
 
