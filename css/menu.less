@@ -58,6 +58,11 @@ nav ul li a{
 	font-size: 13px;
 }
 
+nav a.logo {
+	display: block;
+	line-height: @nav-height;
+}
+
 nav ul li a:hover{
 	color: @hover-font-color;
 	text-decoration: none;
@@ -67,22 +72,6 @@ nav ul li a:hover{
 nav ul li a:active, nav ul li a:visited {
 	text-decoration: none;
 }
-
-/*
-nav a#responsive-btn{
-	display: none;
-	background-color: @theme-background-color;
-	background-image: url('../img/menu-dashes.png');
-	width: @nav-height;
-	height: @nav-height;
-	float: right;
-}
-
-nav a#responsive-btn:hover{
-	background-color: @theme-hover-color;
-}
-
-*/
 
 nav a#responsive-btn{
 	display: none;
