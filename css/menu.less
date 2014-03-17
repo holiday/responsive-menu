@@ -15,6 +15,8 @@
 @theme-hover-color: #D33450; 	  /* hover theme color */
 @res-font-color: #fff;			  /* font color when you hover in responsive mode */
 @res-list-border-top: #C75454;	  /* color of border separating each link in responsive mode */
+@list-item-height: 50px;
+@res-btn-padding: 20px 16px;
 
 a:active, a:visited { 
     border: none;
@@ -59,7 +61,7 @@ nav ul li a{
 }
 
 nav a.logo {
-	display: block;
+	padding-left: 10px;
 	line-height: @nav-height;
 }
 
@@ -76,7 +78,7 @@ nav ul li a:active, nav ul li a:visited {
 nav a#responsive-btn{
 	display: none;
 	background-color: @theme-background-color;
-	padding: 19px 15px;
+	padding: @res-btn-padding;
 	width: @nav-height;
 	height: @nav-height;
 	color: #fff;
@@ -117,6 +119,7 @@ a#responsive-btn:hover{
 		width: 100%;
 		height: auto;
 		display: none;
+		z-index: 1;
 	}
 
 	nav ul li {
@@ -132,7 +135,7 @@ a#responsive-btn:hover{
 
 	nav ul li a {
 		color: @res-font-color;
-		line-height: @nav-height;
+		line-height: @list-item-height;
 		padding: 0px 20px;
 		width: 100%;
 	}
