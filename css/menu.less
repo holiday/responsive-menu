@@ -17,11 +17,12 @@
 @list-item-height: 50px;
 @res-btn-padding: 20px 16px;
 
-a:active, a:visited { 
-    border: none;
-    outline: none;
+a:active, a:visited, a:focus { 
+    border: none !important;
+    outline: none !important;
+    color: @font-color;
+    text-decoration: none;
 }
-
 nav{
 	position: fixed;
 	top: 0;
